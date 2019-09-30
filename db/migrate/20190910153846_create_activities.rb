@@ -4,7 +4,8 @@ class CreateActivities < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :address
       t.string :description
-
+      
+      
       t.timestamps
     end
   end
