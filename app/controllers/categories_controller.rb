@@ -13,8 +13,8 @@ private
 #   end
 
   # Only allow a trusted parameter "white list" through.
-#   def list_params
-#     params.require(:list).permit(:title)
-#   end
+  def category_params
+    params.require(:category).permit(:title, :activiity_id)
+  end
 
 end
