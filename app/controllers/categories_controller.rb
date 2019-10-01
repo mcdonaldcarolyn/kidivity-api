@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-    before_action  only: [:index]
+    
 def index
   @categories = Category.all
   render json: @categories

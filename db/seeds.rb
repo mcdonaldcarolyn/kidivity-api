@@ -16,3 +16,14 @@ Activity.create(name: 'lego museum', address: 'somerville, ma', description: 'gr
 Activity.create(name: 'boda borg', address: 'malden, ma', description: 'escape room')
 Activity.create(name: 'movies', address: 'revere, ma', description: 'see a movie')
 
+categoryOne = Category.find(1)
+categoryOne.activities << Activity.find(1)
+categoryOne.activities << Activity.find(2)
+categoryTwo = Category.find(2)
+categoryTwo.activities << Activity.find(3)
+categoryTwo.activities << Activity.find(4)
+categoryThree = Category.find(3)
+categoryThree.activities << Activity.find(5)
+categoryThree.activities << Activity.find(6)
+
+
