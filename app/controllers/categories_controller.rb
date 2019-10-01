@@ -1,11 +1,16 @@
 class CategoriesController < ApplicationController
-    before_action :set_list, only: [:show]
-def show 
+    before_action  only: [:index]
+def index
+  @categories = Category.all
+  render json: @categories
 end
+
+
 private
-def set_list
-    @list = List.find(params[:id])
-  end
+# def set_category
+#     # @category = Category.find(params[:id])
+    
+#   end
 
   # Only allow a trusted parameter "white list" through.
 #   def list_params
