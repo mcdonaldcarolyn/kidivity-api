@@ -15,8 +15,10 @@ class ActivitiesController < ApplicationController
 
   # POST /activities
   def create
+    
+  
     @activity = Activity.new(activity_params)
-
+    binding.pry
     if @activity.save
       render json: @activity, status: :created, location: @activity
     else
@@ -46,6 +48,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def activity_params
-      params.require(:activity).permit(:name, :address, :description, category_ids: [], category_attributes: [:title])
+      params.require(:activity).permit(:name, :address, :description,  categories_attributes: [:title])
     end
 end
