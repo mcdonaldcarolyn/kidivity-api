@@ -18,7 +18,7 @@ class ActivitiesController < ApplicationController
     
   
     @activity = Activity.new(activity_params)
-    binding.pry
+    
     if @activity.save
       render json: @activity, status: :created, location: @activity
     else
