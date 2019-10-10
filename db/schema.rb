@@ -16,14 +16,9 @@ ActiveRecord::Schema.define(version: 2019_09_27_160932) do
     t.string "name"
     t.string "address"
     t.string "description"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "activities_categories", id: false, force: :cascade do |t|
-    t.integer "activity_id", null: false
-    t.integer "category_id", null: false
-    t.index ["activity_id", "category_id"], name: "index_activities_categories_on_activity_id_and_category_id"
   end
 
   create_table "categories", force: :cascade do |t|
