@@ -1,7 +1,7 @@
 class Activity < ApplicationRecord
   belongs_to :category
   validates :name, presence: true
-  validates :name, uniqueness: true {message: "The activity has already been added"}
+  validates :name, uniqueness: true 
   # for scale
     # has_and_belongs_to_many :categories
     #  accepts_nested_attributes_for :categories
